@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppService } from './app.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-assessment';
+  public data = [];
+
+  constructor(private appService: AppService) {}
+
+  ngOnInit(): void {
+    this.getData();
+  }
+  
+  getData() {
+    this.appService.getJsonData().subscribe((response: any) => {
+      this.data = response;
+    });
+  }
+
 }

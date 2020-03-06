@@ -1,0 +1,18 @@
+.app header {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    background: #FF9800;
+    color: #fff;
+}
+
+.app header h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.app .content {
+    width: 1024px;
+    margin: 20px auto;
+}
